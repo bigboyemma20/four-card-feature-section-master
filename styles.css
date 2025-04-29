@@ -81,7 +81,7 @@ body{
     padding-inline: inherit;
     text-align: center;
     font-size: 1rem;
-   font-weight: 400;
+    font-weight: 400;
     color: var(--Grey-500);
     line-height: 1.5;
   }
@@ -121,6 +121,7 @@ body{
 
 }
 
+/* border colors */
 .card-supervisor{
     border-color: var(--Cyan);
 }
@@ -142,11 +143,62 @@ footer{
   place-items: center;
   padding-block: 20px;
   padding-inline: inherit;
+
+  .attribution { font-size: 11px; text-align: center; }
+  .attribution a { color: hsl(228, 45%, 44%); }   
+
   
 }
 
-@media screen {
+/* responsiveness */
+
+@media (max-width: 375px) {
+  .container{
+    max-inline-size: 90%;
+    gap: .2rem;
+    
+  }
   
+  .top {
+    width: 9;
+   margin-inline: 20px;
+   margin-inline-end: -10px;
+  }
+  
+  .top span, 
+  .top strong, 
+  .top p{
+    font-size-adjust: .45;
+    text-align: center;   
+     
+  }
+  
+   
+  .card-calculator,
+  .card-karma,
+  .card-supervisor,
+  .card-team-builder{
+    margin-inline: 20px;
+    margin-inline-end: -10px;
+    
+    h2{
+      font-size: 1.1rem;
+    }
+    p{
+      font-size: .8rem;
+    }
+    
+    img{
+      width: 16%;
+      margin-block-start:  10px;
+      
+    }
+  }
+  
+  footer{
+   margin-inline: 20px;
+   padding-inline: 40px;
+  }
 }
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }   
+
+

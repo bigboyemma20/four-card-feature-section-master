@@ -1,0 +1,125 @@
+:root{
+    /* Primary */
+
+--Red: hsl(0, 78%, 62%);
+--Cyan: hsl(180, 62%, 55%);
+--Orange: hsl(34, 97%, 64%);
+--Blue: hsl(212, 86%, 64%);
+
+/* Neutral */
+
+--Grey-500: hsl(234, 12%, 34%);
+--Grey-400: hsl(212, 6%, 44%);
+--White: hsl(0, 0%, 100%);
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
+}
+
+body{
+  display: grid;
+  place-content: center;
+  background-color: var(--white);
+  font-family: 'Poppins', sans-serif;
+ }
+
+.container{
+  display: grid;
+  place-items: center;
+  gap: 0.5rem;
+  /* grid-template-columns: 2fr 2fr; */
+  align-content: center;
+  h2{
+  
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--Grey-500);
+    font-weight: 600;
+  }
+  p{
+    
+    font-size: 0.9rem;
+    color: var(--Grey-400);
+    font-weight: 400;
+  }
+  span{
+    display: block;
+    font-size: 1rem;
+    color: var(--Grey-400);
+    font-weight: 400;
+    align-self: center;
+    padding-block: 40px 10px;
+    padding-inline: 20px;
+  }
+  strong{
+    display: block;
+    font-size: 1rem;
+    color: var(--Grey-500);
+    font-weight: 600;
+   align-items: center;
+    padding-inline: 20px;
+  }
+  .top p{
+    display: block;
+    font-size: 1rem;
+    color: var(--Grey-500);
+    font-weight: 400;
+    align-self: center;
+    padding-inline: 20px;
+  }
+}
+
+.card-supervisor,
+.card-team-builder,
+.card-karma,
+.card-calculator{
+  max-width: 20rem; 
+  max-height: 18rem;
+  border-radius: 5px;
+  border-top: 4px solid;
+  padding-block: 20px;
+  margin-block: 20px;
+  padding-inline: 20px;
+  box-shadow: 1px 1px 20px -10px var(--Cyan);
+}
+
+.card-supervisor,
+.card-team-builder,
+.card-karma,
+.card-calculator{
+    display: grid;
+    grid-column-start: 1;
+    place-items: start;
+      
+}
+
+.card-supervisor img,
+.card-team-builder img,
+.card-karma img,
+.card-calculator img{
+    place-self: end;
+    padding-block: 10px;
+
+}
+
+.card-supervisor{
+    border-color: var(--Cyan);
+}
+
+.card-team-builder{
+    border-color: var(--Red);
+}
+.card-karma{
+    border-color: var(--Orange);
+}
+.card-calculator{
+    border-color: var(--Blue);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+

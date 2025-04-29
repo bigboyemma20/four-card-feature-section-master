@@ -46,31 +46,46 @@ body{
     color: var(--Grey-400);
     font-weight: 400;
   }
+  
+  .top{
+  display: grid;
+  place-items: center;
+  padding-block: 20px;
+  padding-inline: 10px;
+  
   span{
-    display: block;
+     display: block;
     font-size: 1rem;
     color: var(--Grey-400);
     font-weight: 400;
     align-self: center;
     padding-block: 40px 10px;
-    padding-inline: 20px;
+    padding-inline: inherit;
+    font-size: 1.45rem;
+    line-height: 1;
   }
+  
   strong{
-    display: block;
+     display: block;
     font-size: 1rem;
     color: var(--Grey-500);
     font-weight: 600;
    align-items: center;
-    padding-inline: 20px;
+    padding-inline: inherit;
+    font-size: 1.5rem;
+    line-height: 1;
   }
-  .top p{
-    display: block;
+  
+  p{
+    padding-block-start: 20px;
+    padding-inline: inherit;
+    text-align: center;
     font-size: 1rem;
+   font-weight: 400;
     color: var(--Grey-500);
-    font-weight: 400;
-    align-self: center;
-    padding-inline: 20px;
+    line-height: 1.5;
   }
+  
 }
 
 .card-supervisor,
@@ -120,6 +135,18 @@ body{
     border-color: var(--Blue);
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+}
 
+footer{
+  display: grid;
+  place-items: center;
+  padding-block: 20px;
+  padding-inline: inherit;
+  
+}
+
+@media screen {
+  
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }   

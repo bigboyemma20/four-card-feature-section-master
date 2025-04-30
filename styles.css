@@ -1,265 +1,234 @@
-:root{
-    /* Primary */
+:root {
+  /* Primary */
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
 
---Red: hsl(0, 78%, 62%);
---Cyan: hsl(180, 62%, 55%);
---Orange: hsl(34, 97%, 64%);
---Blue: hsl(212, 86%, 64%);
-
-/* Neutral */
-
---Grey-500: hsl(234, 12%, 34%);
---Grey-400: hsl(212, 6%, 44%);
---White: hsl(0, 0%, 100%);
+  /* Neutral */
+  --Grey-500: hsl(234, 12%, 34%);
+  --Grey-400: hsl(212, 6%, 44%);
+  --White: hsl(0, 0%, 100%);
 }
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  
 }
 
-body{
+body {
+  font-size: 1em;
+  background-color: var(--White);
+  font-family: 'Poppins', sans-serif;
   display: grid;
   place-content: center;
-  background-color: var(--white);
-  font-family: 'Poppins', sans-serif;
- }
+  color: var(--Grey-500);
+}
 
-.container{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+  padding: 2em;
+  max-width: 80em;
+  margin: 0 auto;
   place-items: center;
-  gap: 0.5rem;
-  /* grid-template-columns: 2fr 2fr; */
   align-content: center;
+}
+
+h1 {
+  font-size: 1.45em;
+  line-height: 1;
+  font-weight: 400;
+  text-align: center;
+  color: var(--Grey-400);
+  padding-block: 2.5em 0.625em;
+}
+
+h2 {
+  font-size: 1.5em;
+  line-height: 1;
+  font-weight: 600;
+  text-align: center;
+  color: var(--Grey-500);
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+  text-align: center;
+  color: var(--Grey-500);
+}
+
+p {
+  font-size: 1em;
+  font-weight: 400;
+  text-align: center;
+  color: var(--Grey-400);
+  line-height: 1.5;
+  margin-top: 1.25em;
+}
+
+.container p{
+  text-align: start;
+  margin-block: 1em;
   
-  h3{
-    text-align: center;
-    font-size: 1.5rem;
-    color: var(--Grey-500);
-    font-weight: 600;
-  }
-  
-  p{
-    
-    font-size: .95rem;
-    color: var(--Grey-400);
-    font-weight: 400;
-  }
-  
-  .top{
+}
+
+.top {
   display: grid;
   place-items: center;
-  padding-block: rem;
-  padding-inline: 10px;
-  
-  
-  h1{
-    font-size: 1rem;
-    color: var(--Grey-400);
-    font-weight: 400;
-    align-self: center;
-    padding-block: 40px 10px;
-    padding-inline: inherit;
-    font-size: 1.45rem;
-    line-height: 1;
-  }
-  
-  h2{
-    font-size: 1rem;
-    color: var(--Grey-500);
-    font-weight: 600;
-   align-items: center;
-    padding-inline: inherit;
-    font-size: 1.5rem;
-    line-height: 1;
-  }
-  
-  p{
-    margin-block-start: 1.25rem;
-    padding-inline: inherit;
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-  }
-  
+  padding-block: 1em;
+  padding-inline: 0.625em;
 }
 
 .card-supervisor,
 .card-team-builder,
 .card-karma,
-.card-calculator{
-  max-width: 20rem;
-  border-radius: 5px;
-  border-top: 4px solid;
-  padding-block: 1.25rem;
-  margin-block: 1.25rem;
-  padding-inline: 20px;
-  box-shadow: 1px 1px 20px -10px var(--Cyan);
+.card-calculator {
+  max-width: 20em;
+  width: 100%;
+  border-radius: 0.3125em;
+  border-top: 0.25em solid;
+  padding: 1.25em 1.25em;
+  margin-block: 1.25em;
+  box-shadow: 0.0625em 0.0625em 1.25em -0.625em var(--Blue);
+  display: grid;
+  place-items: start;
+  background-color: var(--White);
 }
 
-.card-supervisor,
-.card-team-builder,
-.card-karma,
-.card-calculator{
-    display: grid;
-    grid-column-start: 1;
-    place-items: start;
-      
+.card-supervisor {
+  border-color: var(--Cyan);
+}
+
+.card-team-builder {
+  border-color: var(--Red);
+}
+
+.card-karma {
+  border-color: var(--Orange);
+}
+
+.card-calculator {
+  border-color: var(--Blue);
 }
 
 .card-supervisor img,
 .card-team-builder img,
 .card-karma img,
-.card-calculator img{
-    place-self: end;
-    padding-block: 10px;
-
+.card-calculator img {
+  place-self: end;
+  padding-block: 0.625em;
+  max-width: 3em;
 }
 
-/* border colors */
-.card-supervisor{
-    border-color: var(--Cyan);
-}
-
-.card-team-builder{
-    border-color: var(--Red);
-}
-.card-karma{
-    border-color: var(--Orange);
-}
-.card-calculator{
-    border-color: var(--Blue);
-}
-
-}
-
-footer{
+/* Footer */
+footer {
   display: grid;
   place-items: center;
-  padding-block: 20px;
-  padding-inline: inherit;
-
-  .attribution { font-size: 11px; text-align: center; }
-  .attribution a { color: hsl(228, 45%, 44%); }   
-
-  
+  padding-block: 1.25em;
+  padding-inline: 2.5em;
 }
 
-/* responsiveness */
+.attribution {
+  font-size: 0.6875em;
+  text-align: center;
+  color: var(--Grey-400);
+}
 
-@media (max-width: 48rem) {
-  .container{
-    max-inline-size: 100%;
-    margin-inline: 1.5rem
-    
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* ======================== */
+/* ✅ RESPONSIVE BREAKPOINTS */
+/* ======================== */
+
+/* ≤ 30em (480px) */
+@media (max-width: 30em) {
+  h1, h2 {
+    font-size: 1.25em;
   }
-  
-  .top {
-    width: 9;
-   margin-inline: 1.5rem;
-   margin-block-start:  2rem;
-   margin-block-end: 1rem;
+
+  h3 {
+    font-size: 1em;
   }
-  
-  .top h1, 
-  .top h2, 
-  .top p{
-    font-size-adjust: .45;
-    text-align: center;   
-    margin-inline: 1.5rem;
-    
-     
-  }
-  
-   
-  .card-calculator,
-  .card-karma,
-  .card-supervisor,
-  .card-team-builder{
-    margin-inline: 1.5rem;
-    width: 90vw;
-    
-    h3{
-      font-size: 1.2rem;
-    }
-    
-      
-    p{
-      font-size: .8rem;
-    }
-    
-    img{
-      width: 15%;
-      margin-block-start:  10px;
-      
-    }
-    
-    
-    
-  }
-  
-  footer{
-   margin-inline: 3rem;
-   padding-inline: 2.5rem;
+
+  p {
+    font-size: 0.85em;
   }
 }
 
-@media (max-width: 64rem) {
-  .container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 2fr;
-    margin-inline: 1.5rem
-    
+/* 30.063em – 40em (481px – 640px) */
+@media (min-width: 30.063em) and (max-width: 40em) {
+  h1, h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+}
+
+/* 40.063em – 48em (641px – 768px) */
+@media (min-width: 40.063em) and (max-width: 48em) {
+  h1 {
+    font-size: 1.75em;
+  }
+
+  h3 {
+    font-size: 1.3em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}
+
+/* 48.063em – 80em (769px – 1280px): Two columns */
+@media (min-width: 48.063em) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    padding-inline: 4em;
   }
   
-  .top {
-    width: 9;
-   margin-inline: 1.5rem;
-   margin-block-start:  2rem;
-   margin-block-end: 1rem;
-  }
-  
-  .top h1, 
-  .top h2, 
   .top p{
-    font-size-adjust: .45;
-    text-align: center;   
-    margin-inline: 1.5rem;
-    
-     
+    width: 60%;
+    font-size: 1.3em
   }
   
-   
-  .card-calculator,
-  .card-karma,
-  .card-supervisor,
+  h1{
+    font-size: 2.45em;
+  }
+  
+  h2{
+    font-size: 2.5em;
+  }
+  
+  .card-supervisor{
+    grid-column: 1;
+    grid-row:1 / span 2;
+  }
+  
   .card-team-builder{
-    margin-inline: 1.5rem;
-    width: 90vw;
-    
-    h3{
-      font-size: 1.8rem;
-    }
-    
-      
-    p{
-      font-size: 1rem;
-    }
-    
-    
+    grid-column: 2;
+    grid-row:1;
   }
   
+  .card-karma{
+    grid-column: 2;
+  }
   
-  
-  footer{
-   margin-inline: 3rem;
-   padding-inline: 2.5rem;
+  .card-calculator{
+    grid-column: 3;
+    grid-row:1 / span 2;
+    page: 
   }
 }
 

@@ -148,8 +148,12 @@ footer {
 
 /* ≤ 30em (480px) */
 @media (max-width: 30em) {
-  h1, h2 {
-    font-size: 1.25em;
+  .top {
+    width:80%;
+    margin-inline: auto;
+  }
+  h1 {
+    font-size: 1.45em;
   }
 
   h3 {
@@ -157,12 +161,16 @@ footer {
   }
 
   p {
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
-}
 
+}
 /* 30.063em – 40em (481px – 640px) */
 @media (min-width: 30.063em) and (max-width: 40em) {
+  .top{
+    width: 80%;
+    margin-inline: auto;
+  }
   h1, h2 {
     font-size: 1.5em;
   }
@@ -178,6 +186,9 @@ footer {
 
 /* 40.063em – 48em (641px – 768px) */
 @media (min-width: 40.063em) and (max-width: 48em) {
+  .top p{
+    width:80%;
+  }
   h1 {
     font-size: 1.75em;
   }
@@ -228,7 +239,7 @@ footer {
   .card-calculator{
     grid-column: 3;
     grid-row:1 / span 2;
-    page: 
-  }
+    }
+
 }
 
